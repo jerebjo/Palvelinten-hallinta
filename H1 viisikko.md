@@ -48,6 +48,7 @@ VM: Linux Debian 12 bookworm
 
 ## a) Asenna Debian 12-Bookworm virtuaalikoneeseen. 
 
+Asensin Debian 12-BookWoermin virtuaalikoneeseen onnistuneesti. 
 
 
 ## Lähteet
