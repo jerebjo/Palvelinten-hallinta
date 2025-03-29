@@ -50,6 +50,7 @@ VM: Linux Debian 12 bookworm
 
 Asensin Debian 12-BookWoermin virtuaalikoneeseen onnistuneesti. 
 
+![Kuvat/Debian.png]
 
 ## Lähteet
 
