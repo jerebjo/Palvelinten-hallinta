@@ -10,7 +10,7 @@ Näytönohjain: NVIVIA GeForce RTX 2050
 
 OS: Windows 10
 
-VM: Linux Debian 12 bookworm
+VM: Linux Debian 12 bookworm 64-bit
 
 ## x) Lue ja tiivistä. 
 
@@ -115,8 +115,23 @@ User tilafunktio komento tarkastaa onko tietty käyttäjä olemassa, jos ei ole 
 
 ![cmd](Kuvat/cmd.png)
 
-  Cmd tilfuktio komento varmistaa, ettö jokin tiedosto on olemassa, jos sitä ei ole se luodaan. Jos tiedosto on jo olemassa se ei tee mitään. 
-  
+  Cmd tilafuktio komento varmistaa, ettö jokin tiedosto on olemassa, jos sitä ei ole se luodaan. Jos tiedosto on jo olemassa se ei tee mitään. 
+
+## d) Idempotentti. Anna esimerkki idempotenssista. Aja 'salt-call --local' komentoja, analysoi tulokset, selitä miten idempotenssi ilmenee.
+
+Aluksi selvitin mitä idempotentti tarkoittaa. Suomisanakirjan mukaan indempotenssi tarkoittaa ominaisuutta, jossa tietty operaatio voidaan suorittaa useita kertoja tuottamatta lisää vaikutusta alkuperäiseen arvoon. Päätin kokeilla esimerkkejä. Loin ensin uuden käyttäjän: 
+
+    $ sudo salt-call --local -l info state.single user.present jere
+
+![uusikäyttäjä](Kuvat/newuser.png)
+
+Seuraavaksi ajoin komennon uudestaan ja testasin mitä käy: 
+
+![user is present](Kuvat/present.png)
+
+Ajoin saman komennon useamman kerran ja sain aina saman tuloksen, joten idempotenssi toimii eli alkuperäinen arvo ei muutu suorituskerroista riippumatta. 
+
+
     
 ## Lähteet
 
@@ -125,4 +140,5 @@ User tilafunktio komento tarkastaa onko tietty käyttäjä olemassa, jos ei ole 
 - Karvinen, T. 28.3.2018. Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux. Luettavissa: https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/ Luettu: 29.3.2025
 - Karvinen, T. 4.6.2006. Raportin kirjoittaminen. Luettavissa: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/ Luettu: 29.3.2025
 - VMware, Inc. 2025. Salt Install Guide: Linux (DEB) Luettavissa: https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html Luettu: 29.3.2025
+- Suomisanakirja. s.a. idempotenssi. Luettavissa: https://www.suomisanakirja.fi/idempotenssi Luettu: 29.3.2025
  
