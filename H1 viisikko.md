@@ -1,4 +1,4 @@
-# H1 Viisikko
+![image](https://github.com/user-attachments/assets/7b10dadb-37a1-4627-a995-c96364eac71b)# H1 Viisikko
 
 ## Käyttöympäristö
 
@@ -75,7 +75,49 @@ Seuraavaksi asensin salt-minionin:
 
 ##  Viisi tärkeintä. Näytä Linuxissa esimerkit viidestä tärkeimmästä Saltin tilafunktiosta: pkg, file, service, user, cmd. Analysoi ja selitä tulokset. 
 
+### pkg
+Aloitin testaamalla esimerkin pkg-tilafunktiosta: 
 
+    $ $ sudo salt-call --local -l info state.single pkg.installed tree 
+
+  ![pkg](Kuvat/pkg.png)
+
+Tilafunktio varmistaa, että jokin paketti on asennettu paikalliselle koneelle. Jos sitä ei ole komento asentaa sen. Vaihtoehtoisesti paketin voi myös poistaa koneelta. 
+
+### File
+File: 
+
+    $ sudo salt-call --local -l info state.single file.managed /tmp/hellojere
+
+![file](Kuvat/file.png)
+
+File tilafunktio varmistaa, että tiedosto on olemassa paikallisessa ympäristössä, jos ei ole niin se luodaan. 
+
+### Service
+
+    $ $ sudo salt-call --local -l info state.single service.running apache2 enable=True
+
+![service](Kuvat/service.png)
+
+Service tilafunktio varmistaa, että apache2 on käynnissä ja se käynnistyy automaattisesti. Minulla ei kuitenkaan ole apache2 asennettuna, joten se ei toiminut.
+
+### User
+
+    $ sudo salt-call --local -l info state.single user.present jereb
+
+![user](Kuvat/user.png) 
+
+User tilafunktio komento tarkastaa onko tietty käyttäjä olemassa, jos ei ole se luodaan. 
+
+### Cmd
+
+    $ sudo salt-call --local -l info state.single cmd.run 'touch /tmp/foo' creates="/tmp/foo"
+
+![cmd](Kuvat/cmd.png)
+
+  Cmd tilfuktio komento varmistaa, ettö jokin tiedosto on olemassa, jos sitä ei ole se luodaan. Jos tiedosto on jo olemassa se ei tee mitään. 
+  
+    
 ## Lähteet
 
 - Karvinen, T. 2025. Tehtävänanto. h1 viisikko. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/#h1-viisikko Luettu: 29.3.2025
