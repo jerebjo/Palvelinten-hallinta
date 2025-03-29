@@ -27,4 +27,15 @@ VM: Linux Debian 12 bookworm
 ### Karvinen 2006: Raportin kirjoittaminen 
 
 - Raportointi tarkoittaa, että kirjoitat täsmällisesti mitä teit ja mitä siitä seuraa.
-- Raportti tulee olla **Toistettava** , **Täsmällinen** , **Helppolukuinen** ja **Täytyy viitata lähteisiin** 
+- Raportti tulee olla **Toistettava** , **Täsmällinen** , **Helppolukuinen** ja **Täytyy viitata lähteisiin**
+
+### WMWare Inc: Salt Install Guide: Linux (DEB)
+
+- Saltin asennus
+  1. Luo tarvittava hakemisto ja lataa julkinen avain.
+
+          # Keyrings hakemisto:
+         $ mkdir -p /etc/apt/keyrings
+           # Julkisen avaimen lataus
+         $ curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public | sudo tee /etc/apt/keyrings/salt-archive-keyring.pgp
+ 
