@@ -52,6 +52,30 @@ Asensin Debian 12-BookWoermin virtuaalikoneeseen onnistuneesti.
 
 ![Debian asennus](Kuvat/Debian.png)
 
+## b) Asenna Salt (salt-minion) Linuxille
+
+Aloitin tehtävän suorittamalla (WMware, Inc) Ohjeen mukaan lataamalla Saltin: 
+
+Varmistin, että keyrings-hakemisto on olemassa: 
+
+    $ mkdir -p /etc/apt/keyrings 
+
+Julkisen avaimen lataus: 
+
+    $ curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public | sudo tee /etc/apt/keyrings/salt-archive-keyring.pgp 
+
+Loin apt-arkiston repositorion: 
+
+    $ curl -fsSL https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.sources | sudo tee /etc/apt/sources.list.d/salt.sources
+
+Seuraavaksi asensin salt-minionin: 
+
+    $ sudo apt-get update
+    $ sudo apt-get -y install salt-minion
+
+##  Viisi tärkeintä. Näytä Linuxissa esimerkit viidestä tärkeimmästä Saltin tilafunktiosta: pkg, file, service, user, cmd. Analysoi ja selitä tulokset. 
+
+
 ## Lähteet
 
 - Karvinen, T. 2025. Tehtävänanto. h1 viisikko. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/#h1-viisikko Luettu: 29.3.2025
