@@ -31,11 +31,21 @@ VM: Linux Debian 12 bookworm
 
 ### WMWare Inc: Salt Install Guide: Linux (DEB)
 
-- Saltin asennus
+#### Saltin asennus
+
   1. Luo tarvittava hakemisto ja lataa julkinen avain.
 
-          # Keyrings hakemisto:
+         # Keyrings hakemisto:
          $ mkdir -p /etc/apt/keyrings
-           # Julkisen avaimen lataus
+         # Julkisen avaimen lataus
          $ curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public | sudo tee /etc/apt/keyrings/salt-archive-keyring.pgp
+
+  2. Päivitä pakettiluettelo
+
+         $ sudo apt-get update
+
+  3. Lataa salt-minion, salt-master tai joku muita salt-komponentteja.
+
+## Lähteet
+
  
