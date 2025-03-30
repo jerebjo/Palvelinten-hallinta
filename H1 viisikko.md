@@ -48,7 +48,7 @@ VM: Linux Debian 12 bookworm 64-bit
 
 ## a) Asenna Debian 12-Bookworm virtuaalikoneeseen. 
 
-Asensin Debian 12-BookWoermin virtuaalikoneeseen onnistuneesti. 
+Asensin Debian 12-BookWormin virtuaalikoneeseen onnistuneesti. 
 
 ![Debian asennus](Kuvat/Debian.png)
 
@@ -85,7 +85,7 @@ Aloitin testaamalla esimerkin pkg-tilafunktiosta:
 Tilafunktio varmistaa, että jokin paketti on asennettu paikalliselle koneelle. Jos sitä ei ole komento asentaa sen. Vaihtoehtoisesti paketin voi myös poistaa koneelta. 
 
 ### File
-File: 
+ 
 
     $ sudo salt-call --local -l info state.single file.managed /tmp/hellojere
 
