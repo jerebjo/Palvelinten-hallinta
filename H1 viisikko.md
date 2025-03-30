@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/7b10dadb-37a1-4627-a995-c96364eac71b)# H1 Viisikko
+# H1 Viisikko
 
 ## Käyttöympäristö
 
