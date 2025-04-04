@@ -1,6 +1,16 @@
 # H2 Soitto kotiin
 
-## 
+## Käyttöympäristö
+
+Prosessori: AMD Ryzen 5 5500H
+
+RAM: 8 GB DDR4
+
+Näytönohjain: NVIVIA GeForce RTX 2050
+
+OS: Windows 10
+
+VM: Linux Debian 12 bookworm 64-bit
 
 ## x) Lue ja tiivistä. (Tässä x-alakohdassa ei tarvitse tehdä testejä tietokoneella, vain lukeminen tai kuunteleminen ja tiivistelmä riittää. Tiivistämiseen riittää muutama ranskalainen viiva. Ei siis vaadita pitkää eikä essee-muotoista tiivistelmää.) 
 
