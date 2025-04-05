@@ -77,6 +77,12 @@ Seuraavaksi avasin `vagrantfile` -tiedoston ja kopion sinne (Karvinen, T. 2021) 
 
 ![Vagrantfile](Kuvat/Vfile.png)
 
+Sitten laitoin virtuaalikoneet päälle komennolla: 
+
+        $ Vagrant up
+
+![twohost](Kuvat/twohost.png)
+
 ## Lähteet  
 
 - Karvinen, T. 3.4.2025. Tehtävänanto. h2 Soitto kotiin. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/#h2-soitto-kotiin Luettu: 4.4.2025
