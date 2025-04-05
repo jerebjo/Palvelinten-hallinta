@@ -133,7 +133,13 @@ Seuraavaksi siirryin takaisin master koneen puolelle ja kokeilin hyväksyä orja
 
 ![saltkeyproblem](Kuvat/saltkey.png)
 
+Päätin alkaa selvittämään ongelmaa. (VMWare, INC. 2025) mukaan, jotta voi hyväksyä minionin avaimen master ja minion koneen täytyy olla päällä, joten päätin tarkastaa sen. Molemmat olivat päällä, joten ongelma ei ollut siinä. Sitten kokeilin vaihtaa minion tiedoston master-osoitteen vagrantfilessa olevaan ip-osoitteeseen:
 
+![Masteripmuutos](Kuvat/masterip.png)
+
+
+
+sudo 
 ## Lähteet  
 
 - Karvinen, T. 3.4.2025. Tehtävänanto. h2 Soitto kotiin. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/#h2-soitto-kotiin Luettu: 4.4.2025
