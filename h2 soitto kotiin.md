@@ -45,6 +45,11 @@ Minulla ei ollut vagrantia asennettuna, joten aloitin lataamalla sen Vagrantin s
 
 ![Vagrant version](Kuvat/vagrant.png)
 
+## b) Linux Vagrant. Tee Vagrantilla uusi Linux-virtuaalikone.
+
+Aloitin tekemällä uuden kansion `twohost` ja sen jälkeen tein uuden Debian virtuaalikoneen komennolla `vagrant init debian/bookworm64
+` 
+![Vagrantfile](Kuvat/vagrantfile.png)
 ## Lähteet  
 
 - Karvinen, T. 3.4.2025. Tehtävänanto. h2 Soitto kotiin. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/#h2-soitto-kotiin Luettu: 4.4.2025
