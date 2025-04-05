@@ -133,10 +133,15 @@ Seuraavaksi siirryin takaisin master koneen puolelle ja kokeilin hyväksyä orja
 
 ![saltkeyproblem](Kuvat/saltkey.png)
 
-Päätin alkaa selvittämään ongelmaa. (VMWare, INC. 2025) mukaan, jotta voi hyväksyä minionin avaimen master ja minion koneen täytyy olla päällä, joten päätin tarkastaa sen. Molemmat olivat päällä, joten ongelma ei ollut siinä. Sitten kokeilin vaihtaa minion tiedoston master-osoitteen vagrantfilessa olevaan ip-osoitteeseen:
+Päätin alkaa selvittämään ongelmaa. (VMWare, INC. 2025) mukaan, jotta voi hyväksyä minionin avaimen master ja minion koneen täytyy olla päällä, joten päätin tarkastaa sen. Molemmat olivat päällä, joten ongelma ei ollut siinä. Laitoin (ChatGPT, OpenAI) promptin "Mistä johtuu: The key glob '*' does not match any unaccepted keys " Sen mukaan piti tarkastaa minionin asetukset. Sitten kokeilin vaihtaa minion-tiedoston master-osoitteen vagrantfilessa olevaan ip-osoitteeseen:
 
 ![Masteripmuutos](Kuvat/masterip.png)
 
+Tämän jälkeen kokeilin uudelleen voinko hyväksyä avaimen: 
+
+        $ sudo salt-key -A 
+
+![Acceptkey](Kuvat/Acceptkey.png)
 
 
 sudo 
