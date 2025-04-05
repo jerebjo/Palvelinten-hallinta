@@ -53,6 +53,10 @@ Aloitin tekemällä uuden kansion `twohost` ja sen jälkeen tein uuden Debian vi
 
 Seuraavaksi laitoin juuri luodun virtuaalikoneen käyntiin komennolla `vagrant up`
 
+Uusi virtuaalikone ilmestyi nyt myös virtual boxiin: 
+
+![Virtualbox running](Kuvat/running.png)
+
 ![Vagrant up](Kuvat/vup.png)
 
 ## Lähteet  
