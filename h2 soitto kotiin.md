@@ -41,6 +41,10 @@ Vagrant:
 
 ## a) Hello Vagrant! Osoita jollain komennolla, että Vagrant on asennettu (esim tulostaa vagrantin versionumeron). Jos et ole vielä asentanut niitä, raportoi myös Vagrant ja VirtualBox asennukset. (Jos Vagrant ja VirtualBox on jo asennettu, niiden asennusta ei tarvitse tehdä eikä raportoida uudelleen.)
 
+Minulla ei ollut vagrantia asennettuna, joten aloitin lataamalla sen Vagrantin sivuilta. Latauksen jälkeen kone piti käynnistää uudelleen. Sitten testasin, että se on ladattuna: 
+
+![Vagrant version](Kuvat/vagrant.png)
+
 ## Lähteet  
 
 - Karvinen, T. 3.4.2025. Tehtävänanto. h2 Soitto kotiin. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/#h2-soitto-kotiin Luettu: 4.4.2025
