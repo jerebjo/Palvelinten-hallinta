@@ -63,6 +63,9 @@ Seuraavaksi otin virtuaalikoneen käyttöön komennolla `vagrant ssh`:
 
 ![ssh](Kuvat/ssh.png)
 
+Sitten vielä kokeilin `ping` komennolla varmistaakseni, että kone toimii onglemitta: 
+
+![pingtesti](Kuvat/ping.png)
 
 ## Lähteet  
 
