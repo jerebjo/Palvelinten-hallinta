@@ -110,6 +110,22 @@ Lopuksi otin vielä hostnamen talteen, jotta voin yhdistää sen minun minioniin
 
 ![hostname](Kuvat/hostname.png)
 
+Seuraavaksi siirryin minun minion koneelleni: 
+
+        $ vagrant shh t002
+
+Sinne loin myös luottamussuhteen saltin kanssa ja sitten asensin salt-minionin: 
+
+        $ sudo apt-get update
+        $ sudo apt-get -y install salt-minion
+
+Seuraavaksi muokkasin minion-tiedostoa, jotta voin määrittää masterin osoitteen ja id: 
+
+        $ sudoedit /etc/salt/minion
+
+![minionasetukset](Kuvat/minionasetukset.png)
+
+
 ## Lähteet  
 
 - Karvinen, T. 3.4.2025. Tehtävänanto. h2 Soitto kotiin. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/#h2-soitto-kotiin Luettu: 4.4.2025
