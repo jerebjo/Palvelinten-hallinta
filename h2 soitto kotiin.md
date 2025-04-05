@@ -125,6 +125,14 @@ Seuraavaksi muokkasin minion-tiedostoa, jotta voin määrittää masterin osoitt
 
 ![minionasetukset](Kuvat/minionasetukset.png)
 
+Sitten vielä käynnistin minionin uudelleen, jotta asetukset tulevat voimaan: 
+
+        $ sudo systemctl restart salt-minion.service
+
+Seuraavaksi siirryin takaisin master koneen puolelle ja kokeilin hyväksyä orjan avaimen, mutta se ei kuitenkaan onnistunut: 
+
+![saltkeyproblem](Kuvat/saltkey.png)
+
 
 ## Lähteet  
 
