@@ -159,6 +159,14 @@ Ensimmäisenä kokeilin antaako minioni oikean hostnamen komennolla:
 
 ![hostanametesti](Kuvat/hntesti.png)
 
+Minion toteutti käskyn onnistuneesti! 
+
+Seuraavaksi käskin minionia lataamaan apache2-palvelun: 
+
+        $ sudo salt '*' state.single pkg.installed apache2
+
+![Install apache2](Kuvat/apache2.png)
+
 ## Lähteet  
 
 - Karvinen, T. 3.4.2025. Tehtävänanto. h2 Soitto kotiin. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/#h2-soitto-kotiin Luettu: 4.4.2025
