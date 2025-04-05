@@ -83,6 +83,10 @@ Sitten laitoin virtuaalikoneet päälle komennolla:
 
 ![twohost](Kuvat/twohost.png)
 
+Seuraavaksi kokeilin, että koneet voivat pingata toisiaan: 
+
+![pinghost2](Kuvat/pinghost2.png)
+
 ## Lähteet  
 
 - Karvinen, T. 3.4.2025. Tehtävänanto. h2 Soitto kotiin. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/#h2-soitto-kotiin Luettu: 4.4.2025
