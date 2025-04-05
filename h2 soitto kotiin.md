@@ -83,9 +83,32 @@ Sitten laitoin virtuaalikoneet päälle komennolla:
 
 ![twohost](Kuvat/twohost.png)
 
-Seuraavaksi kokeilin, että koneet voivat pingata toisiaan: 
+Seuraavaksi kokeilin, että koneet voivat pingata toisiaan eli pingasin ykköskoneella kakkoskoneen ip-osoitetta: 
 
 ![pinghost2](Kuvat/pinghost2.png)
+
+## d) Herra-orja verkossa. Demonstroi Salt herra-orja arkkitehtuurin toimintaa kahden Linux-koneen verkossa, jonka teit Vagrantilla. Asenna toiselle koneelle salt-master, toiselle salt-minion. Laita orjan /etc/salt/minion -tiedostoon masterin osoite. Hyväksy avain ja osoita, että herra voi komentaa orjakonetta. 
+
+Aloitin lataamalla Saltin. Loin ensin Keyrings-hakemiston: 
+
+        $ mkdir -p /etc/apt/keyrings 
+
+Seuraavaksi latasin julkisen avaimen: 
+
+        $ curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public | sudo tee /etc/apt/keyrings/salt-archive-keyring.pgp
+
+Lopuksi loin APT:n määritystiedoston
+
+        $ curl -fsSL https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.sources | sudo tee /etc/apt/sources.list.d/salt.sources
+
+Seuraavaksi latasin master-koneelle eli `t001` salt-masterin: 
+
+        $ sudo apt-get update
+        $ sudo apt-get -y install salt-master
+
+Lopuksi otin vielä hostnamen talteen, jotta voin yhdistää sen minun minioniin. 
+
+![hostname](Kuvat/hostname.png)
 
 ## Lähteet  
 
