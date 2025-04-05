@@ -149,11 +149,21 @@ Nyt sain sen vihdoin toimimaan! Seuraavaksi kokeilin, että master-kone voi kome
 
 ![whoamitesti](Kuvat/whoami.png)
 
+Minion-kone vastasi onnistuneesti! 
 
-sudo 
+## e) Kokeile vähintään kahta tilaa verkon yli (viisikosta: pkg, file, service, user, cmd) 
+
+Ensimmäisenä kokeilin antaako minioni oikean hostnamen komennolla: 
+
+        $ sudo salt '*' cmd.run 'hostname -I' 
+
+![hostanametesti](Kuvat/hntesti.png)
+
 ## Lähteet  
 
 - Karvinen, T. 3.4.2025. Tehtävänanto. h2 Soitto kotiin. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/#h2-soitto-kotiin Luettu: 4.4.2025
 - Karvinen, T. 4.11.2021. Two Machine Virtual Network With Debian 11 Bullseye and Vagrant. Luettavissa: https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/ Luettu: 4.4.2025
 - Karvinen, T. 28.3.2018. Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux. Luettavissa: https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux Luettu: 4.4.2025
 - Karvinen, T. 28.3.2023. Salt Vagrant - automatically provision one master and two slaves. Luettavissa: https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file Luettu: 4.4.2025
+- VMware, INC. 2022-2025. Accept the minion keys. Luettavissa: https://docs.saltproject.io/salt/install-guide/en/latest/topics/accept-keys.html#accept-keys Luettu: 5.4.2025
+- VMware, INC. 2022-2025. Install Salt DEBs. Luettavissa: https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html Luettu: 5.4.2025
