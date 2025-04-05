@@ -143,6 +143,12 @@ Tämän jälkeen kokeilin uudelleen voinko hyväksyä avaimen:
 
 ![Acceptkey](Kuvat/Acceptkey.png)
 
+Nyt sain sen vihdoin toimimaan! Seuraavaksi kokeilin, että master-kone voi komentaa minion-konetta: 
+
+        $ sudo salt '*' cmd.run 'whoami'
+
+![whoamitesti](Kuvat/whoami.png)
+
 
 sudo 
 ## Lähteet  
