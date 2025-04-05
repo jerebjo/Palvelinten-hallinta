@@ -63,9 +63,19 @@ Seuraavaksi otin virtuaalikoneen käyttöön komennolla `vagrant ssh`:
 
 ![ssh](Kuvat/ssh.png)
 
-Sitten vielä kokeilin `ping` komennolla varmistaakseni, että kone toimii onglemitta: 
+Sitten vielä kokeilin `ping` komentoa varmistaakseni, että kone toimii onglemitta: 
 
 ![pingtesti](Kuvat/ping.png)
+
+## c) Kaksin kaunihimpi. Tee kahden Linux-tietokoneen verkko Vagrantilla. Osoita, että koneet voivat pingata toisiaan. 
+
+Aloitin siirtymällä "twohost" kansioon, jossa on `vagrantfile` tiedosto:  
+
+    cd twohost
+
+Seuraavaksi avasin `vagrantfile` -tiedoston ja kopion sinne (Karvinen, T. 2021) sivuilta löytyvän vagrantfile mallin kahdelle koneelle. Vaihdoin myös debianin oikeaan versioon: 
+
+![Vagrantfile](Kuvat/Vfile.png)
 
 ## Lähteet  
 
