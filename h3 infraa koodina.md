@@ -78,6 +78,11 @@ Kokeilin vielä ajaa paikallisesti:
 
         $ sudo salt-call --local state.apply hello
 
-![newfile](Kuvat/newfile.png)
+![newfile](Kuvat/newsls.png)
 
-![]
+Sitten pääsin vihdoin itse asiaan. Eli suoritin komennon: 
+
+        $ sudo salt '*' state.apply hello
+
+![hello](Kuvat/hello.png)
+
