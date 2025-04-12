@@ -100,5 +100,11 @@ Aloitin tehtävän siirtymällä master-koneelle ja sitten muokkasin aiemman teh
         $ cd /srv/salt/hello
         $ sudoedit init.sls
 
-![init.sls muokkaus]()
+![init.sls muokkaus](Kuvat/kaksitoimintoa.png)
 
+Seuraavaksi ajoin sls-tiedoston: 
+
+        $ sudo salt '*' state.apply hello 
+
+
+![sls-tiedoston ajo](Kuvat/toimintojenajo.png)
