@@ -108,3 +108,7 @@ Seuraavaksi ajoin sls-tiedoston:
 
 
 ![sls-tiedoston ajo](Kuvat/toimintojenajo.png)
+
+Se onnistui ongelmitta. Lopuksi vielä kokeilin, toimiiko idempotentti: 
+
+![Uudestaan](Kuvat/uudelleenajo.png)
