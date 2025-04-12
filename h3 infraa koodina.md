@@ -10,7 +10,34 @@ Näytönohjain: NVIVIA GeForce RTX 2050
 
 OS: Windows 10
 
-VM: Linux Debian 12 bookworm 64-bit
+VM: Vagrant
+
+
+## x) Lue ja tiivistä. (Tässä x-alakohdassa ei tarvitse tehdä testejä tietokoneella, vain lukeminen tai kuunteleminen ja tiivistelmä riittää. Tiivistämiseen riittää muutama ranskalainen viiva.) 
+
+### Karvinen 2014: Hello Salt Infra-as-Code 
+
+- Luo kansio moduulille `sudo mkdir -p /srv/salt/hello/`
+- Kirjoita infraa koodina sls-tiedostoon `sudoedit init.sls`
+- Aja moduuli ja tarkasta tulokset `sudo salt-call --local state.apply hello`
+- Varmista, että tiedosto on luotu `ls /tmp/helloesimerkki`
+
+### VMware, Inc. 2024: Salt contributors 
+
+#### Rules of YAML
+ - Data on avain-arvo-pareissa ja ne erotetaa kaksoispisteellä ja välilyönnillä `: `
+ - Arvon tyyppi voi olla luku, merkkijono tai boolean
+ - Tabia ei saa käyttää
+#### YAML simple structure
+ - Skaalarit = avain-arvo-parit, joissa on luku,merkkijono tai boolean
+ - Listat = Avain, jota seuraa lista arvoista
+ - Sanakirjat = Kokoelma avain-arvo -pareja ja listoja.
+#### Lists and dictionaries - YAML block structures
+ - YAML on järjestetty lohkoihin, joissa sisennys määrittää kontekstin
+ - Sisennys tehdään yhdellä tai useammalla välilyönnillä
+
+
+
 
 ## a) Hei infrakoodi! Kokeile paikallisesti (esim 'sudo salt-call --local') infraa koodina. Kirjota sls-tiedosto, joka tekee esimerkkitiedoston /tmp/ -kansioon.
 
@@ -112,3 +139,11 @@ Seuraavaksi ajoin sls-tiedoston:
 Se onnistui ongelmitta. Lopuksi vielä kokeilin, toimiiko idempotentti: 
 
 ![Uudestaan](Kuvat/uudelleenajo.png)
+
+Idempotentti toimi mainiosti!
+
+## Lähteet
+
+- Karvinen, T. 3.4.2024. Hello Salt Infra-as-Code. Luettavissa: https://terokarvinen.com/2024/hello-salt-infra-as-code/ Luettu: 12.4.2025
+- VMware, Inc. 2021-2024. Salt overview. Luettavissa: https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml Luettu: 12.4.2025
+- Karvinen, T. 28.3.2018. Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux. Luettavissa: https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux Luettu: 12.4.2025
