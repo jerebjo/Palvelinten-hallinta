@@ -66,7 +66,10 @@ Aloitin tehtävän siirtymällä master-koneen puolelle:
 
 ![ssh kirjautuminen masterille](Kuvat/sshlogin.png)
 
-Tässä kohtaan yritin ajaa sls-tiedostoni verkon yli, mutta tajusin, että minähän tein sen vain minion koneelle aiemmassa tehtävässä. Noh.. Kertaus on opintojen äiti. 
+Tässä kohtaan yritin ajaa sls-tiedostoni verkon yli, mutta tajusin, että minähän tein sen vain minion koneelle aiemmassa tehtävässä. Noh.. Kertaus on opintojen äiti.
 
 ![oma vika pikku sika](Kuvat/error.png)
         
+Tässä nyt uusi sls-tiedosto: 
+
+![uusi sls-tiedosto master-koneella](Kuvat/moikkajere.png)
