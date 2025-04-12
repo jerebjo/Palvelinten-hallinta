@@ -64,8 +64,7 @@ Aloitin tehtävän siirtymällä master-koneen puolelle:
 
         $ vagrant shh t001
 
-
-
+![ssh kirjautuminen masterille](Kuvat/sshlogin.png)
 
 
         
