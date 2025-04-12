@@ -42,11 +42,13 @@ Seuraavaksi loin uuden kansion "hello"-moduulille ja siirryin sinne:
 `/srv/salt` on siis kansio, joka jaetaan kaikille slave-koneille. 
 Seuraavaksi itse `sls`-tiedoston tekeminen: 
 
-Siirryin tiedostoon: 
+Avasin tiedoston micro editorilla: 
 
         $ sudoedit init.sls
 
 Loin sinne yksinkertaisen salt-koodin, joka varmistaa, että tiedosto on olemassa ja jos sitä ei ole se luodaan. 
 
-![salt-koodia init.sls](Kuvat/moikkakaikki.png)
+![salt-koodia init.sls](Kuvat/hellojere.png)
+
+
         
