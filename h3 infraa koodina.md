@@ -86,3 +86,8 @@ Sitten pääsin vihdoin itse asiaan. Eli suoritin komennon:
 
 ![hello](Kuvat/hello.png)
 
+Nyt siis "moikkajere"-tiedosto pitäisi olla luotuna minion koneella. Käydäämpä tarkistamassa. 
+
+Siirryin `tmp` kansioon ja annoin komennon `$ ls -A`
+
+![tiedosto luotu](Kuvat/moikkajereluotu.png)
