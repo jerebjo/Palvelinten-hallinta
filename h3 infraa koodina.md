@@ -91,3 +91,14 @@ Nyt siis "moikkajere"-tiedosto pitäisi olla luotuna minion koneella. Käydääm
 Siirryin `tmp` kansioon ja annoin komennon `$ ls -A`
 
 ![tiedosto luotu](Kuvat/moikkajereluotu.png)
+
+## c) Tee sls-tiedosto, joka käyttää vähintään kahta eri tilafunktiota näistä: package, file, service, user. Tarkista eri ohjelmalla, että lopputulos on oikea. Osoita useammalla ajolla, että sls-tiedostosi on idempotentti. 
+
+Aloitin tehtävän siirtymällä master-koneelle ja sitten muokkasin aiemman tehtävän sls-tiedostoa: 
+
+        $ vagrant ssh t001
+        $ cd /srv/salt/hello
+        $ sudoedit init.sls
+
+![init.sls muokkaus]()
+
