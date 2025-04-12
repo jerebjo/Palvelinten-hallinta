@@ -50,5 +50,22 @@ Loin sinne yksinkertaisen salt-koodin, joka varmistaa, että tiedosto on olemass
 
 ![salt-koodia init.sls](Kuvat/hellojere.png)
 
+Lopuksi vielä Kokeilin toimiiko se paikallisesti: 
+
+![Testi ajo paikallisesti](Kuvat/saltcall.png)
+
+Kuvasta näkyy, että uusi tiedosto luotiin onnistuneesti. 
+
+(Karvinen, T. 2024)
+
+## b) Aja esimerkki sls-tiedostosi verkon yli orjalla 
+
+Aloitin tehtävän siirtymällä master-koneen puolelle: 
+
+        $ vagrant shh t001
+
+
+
+
 
         
