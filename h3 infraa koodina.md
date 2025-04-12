@@ -73,3 +73,11 @@ T채ss채 kohtaan yritin ajaa sls-tiedostoni verkon yli, mutta tajusin, ett채 min�
 T채ss채 nyt uusi sls-tiedosto: 
 
 ![uusi sls-tiedosto master-koneella](Kuvat/moikkajere.png)
+
+Kokeilin viel채 ajaa paikallisesti: 
+
+        $ sudo salt-call --local state.apply hello
+
+![newfile](Kuvat/newfile.png)
+
+![]
