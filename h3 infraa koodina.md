@@ -20,9 +20,33 @@ Tehtävää varten minulla oli jo luotuna aiempien tehtävien kaksi vagrant kone
 
 ![Vagrant up](Kuvat/twohost.png)
 
-Sitten kirjauduin slave-koneelle käyttäen ssh kirjautumista, koska tiedostot tulee ajaa paikallisesti: 
+Sitten kirjauduin slave-koneelle käyttäen ssh-kirjautumista, koska tiedostot tulee ajaa paikallisesti: 
 
     $ vagrant ssh t002
 
 ![ssh kirjautuminen minionille](Kuvat/minionlogin.png)
 
+Seuraavaksi asensin micron tekstieditoriksi: 
+
+        $ sudo apt-get -y install micro
+
+Laitoin sen vielä oletuseditoriksi komennolla: 
+
+        $ export EDITOR=micro
+
+Seuraavaksi loin uuden kansion "hello"-moduulille ja siirryin sinne: 
+
+        $ sudo mkdir -p /srv/salt/hello/
+        $ cd /srv/salt/hello/
+
+`/srv/salt` on siis kansio, joka jaetaan kaikille slave-koneille. 
+Seuraavaksi itse `sls`-tiedoston tekeminen: 
+
+Siirryin tiedostoon: 
+
+        $ sudoedit init.sls
+
+Loin sinne yksinkertaisen salt-koodin, joka varmistaa, että tiedosto on olemassa ja jos sitä ei ole se luodaan. 
+
+![salt-koodia init.sls](Kuvat/moikkakaikki.png)
+        
