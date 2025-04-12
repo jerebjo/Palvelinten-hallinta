@@ -14,14 +14,15 @@ VM: Linux Debian 12 bookworm 64-bit
 
 ## a) Hei infrakoodi! Kokeile paikallisesti (esim 'sudo salt-call --local') infraa koodina. Kirjota sls-tiedosto, joka tekee esimerkkitiedoston /tmp/ -kansioon.
 
-Tehtävää varten minulla oli jo luotuna aiempien tehtävien kaksi vagrant konetta. Joten siirryin master koneelle. Ensin koneet päälle:
+Tehtävää varten minulla oli jo luotuna aiempien tehtävien kaksi vagrant konetta. Ensin koneet päälle:
 
     $ Vagrant up
 
 ![Vagrant up](Kuvat/twohost.png)
 
-Sitten kirjauduin master-koneelle käyttäen ssh kirjautumista: 
+Sitten kirjauduin slave-koneelle käyttäen ssh kirjautumista, koska tiedostot tulee ajaa paikallisesti: 
 
-    $ vagrant ssh t001
+    $ vagrant ssh t002
 
-![ssh kirjautuminen masterille](Kuvat/sshlogin.png)
+![ssh kirjautuminen minionille](Kuvat/minionlogin.png)
+
