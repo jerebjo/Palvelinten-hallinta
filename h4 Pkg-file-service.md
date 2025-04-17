@@ -78,6 +78,15 @@ Ja loin uuden `.sls`-tiedoston, jota muokkasin seuraavasti:
     $ micro init.sls
 
 ![sshd](Kuvat/sshdfile.png)
+
+Seuraavaksi tein config-tiedoston: 
+
+    $ cd /srv/salt/sshd/
+    $ micro sshd_config
+
+Ja Laitoin sisällöksi saman mitä (Karvinen, T) sivuilla oli, mutta lisäsin myös oman portin:
+
+![configfile](Kuvat/configfile.png)
         
 
 
