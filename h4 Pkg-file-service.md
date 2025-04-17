@@ -88,6 +88,8 @@ Ja Laitoin sisällöksi saman mitä (Karvinen, T) sivuilla oli, mutta lisäsin m
 
 ![configfile](Kuvat/configfile.png)
         
+Seuraavaksi testasin ajaa sen paikallisesti: 
 
+    $ sudo salt-call --local state.apply sshd
 
-    
+ ![Testiajo](Kuvat/sshdtesti.png)
