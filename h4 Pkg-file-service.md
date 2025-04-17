@@ -42,3 +42,11 @@ Ja sinne loin uuden `.sls`-tiedoston microlla:
 Sitten muokkasin .sls-tiedoston seuraavanlaiseksi: 
 
 ![sls-tiedoston muokkaus](Kuvat/apachesetti.png)
+
+Seuraavaksi yritin ajaa tiedostoa: 
+
+    $ sudo salt '*' state.apply apache.apachesetti
+
+Mutta sain kuitenkin seuraavan virheviestin: 
+
+![Erromessage](Kuvat/vika.png)
