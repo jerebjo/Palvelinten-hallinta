@@ -22,9 +22,23 @@ Seuraavaksi kokeilin, että testisivu on päällä:
 
 ![Testisivun testaus](Kuvat/testisivu.png)
 
-Sitten korvasin, tetsisivun omalla sivulla. 
+Sitten korvasin, testisivun omalla sivulla. 
 
     $ echo "<h1>Tämä on testi</h1>" | sudo tee /var/www/html/index.html
     $ curl localhost
 
 ![Testisivun korvaus](Kuvat/omasivu.png)
+
+Nyt on tehty käsin niin seuraavaksi tehdään automatisoidusti. 
+
+Eli loin uuden moduulin `apache`: 
+
+    $ sudo mkdir -p /srv/salt/apache/
+
+Ja sinne loin uuden `.sls`-tiedoston microlla: 
+
+    $ micro apachesetti.sls
+
+Sitten muokkasin .sls-tiedoston seuraavanlaiseksi: 
+
+![sls-tiedoston muokkaus](Kuvat/apachesetti.png)
