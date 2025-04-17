@@ -58,3 +58,7 @@ Korjasin virheen poistamalla kaksoispisteen `pkg.installed` perästä:
 Sitten kokeilin ajaa uudestaa: 
 
 ![Testiajo](Kuvat/testiajo.png)
+
+Se näytti toimivan hyvin. Kokelin vielä toimiiko hommat minion-koneella: 
+
+![minion-koneen curl-testi](Kuvat/miniontesti.png)
