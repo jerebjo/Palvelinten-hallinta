@@ -93,3 +93,9 @@ Seuraavaksi testasin ajaa sen paikallisesti:
     $ sudo salt-call --local state.apply sshd
 
  ![Testiajo](Kuvat/sshdtesti.png)
+
+ Lopuksi vielä testasin uutta porttia. 
+
+         $ nc -vz localhost 8888 
+
+![porttitesti](Kuvat/porttitesti.png)
