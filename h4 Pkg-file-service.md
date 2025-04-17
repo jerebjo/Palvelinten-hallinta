@@ -50,3 +50,7 @@ Seuraavaksi yritin ajaa tiedostoa:
 Mutta sain kuitenkin seuraavan virheviestin: 
 
 ![Erromessage](Kuvat/vika.png)
+
+Korjasin virheen poistamalla kaksoispisteen `pkg.installed` perästä: 
+
+![Viankorjaus](Kuvat/viankorjaus.png)
