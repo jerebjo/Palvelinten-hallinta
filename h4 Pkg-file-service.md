@@ -54,3 +54,7 @@ Mutta sain kuitenkin seuraavan virheviestin:
 Korjasin virheen poistamalla kaksoispisteen `pkg.installed` perästä: 
 
 ![Viankorjaus](Kuvat/viankorjaus.png)
+
+Sitten kokeilin ajaa uudestaa: 
+
+![Testiajo](Kuvat/testiajo.png)
