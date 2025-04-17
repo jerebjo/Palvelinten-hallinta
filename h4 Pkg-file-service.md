@@ -62,3 +62,23 @@ Sitten kokeilin ajaa uudestaa:
 Se näytti toimivan hyvin. Kokelin vielä toimiiko hommat minion-koneella: 
 
 ![minion-koneen curl-testi](Kuvat/miniontesti.png)
+
+Sekin toimi ongelmitta!
+
+En ollut kuitenkaan varma teinkö tehtävän oikein, sillä en varsinaisesti korvannut testitiedostoa vaan muokkaisin sitä. 
+
+## b) SSHouto. Lisää uusi portti, jossa SSHd kuuntelee.
+
+Aloitin tehtävän tekemällä uuden moduulin `sshd`: 
+
+    $ sudo mkdir -p /srv/salt/sshd
+
+Ja loin uuden `.sls`-tiedoston, jota muokkasin seuraavasti: 
+
+    $ micro init.sls
+
+![sshd](Kuvat/sshdfile.png)
+        
+
+
+    
