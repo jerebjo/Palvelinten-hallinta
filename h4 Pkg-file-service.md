@@ -21,3 +21,10 @@ Seuraavaksi kokeilin, että testisivu on päällä:
     $ curl localhost
 
 ![Testisivun testaus](Kuvat/testisivu.png)
+
+Sitten korvasin, tetsisivun omalla sivulla. 
+
+    $ echo "<h1>Tämä on testi</h1>" | sudo tee /var/www/html/index.html
+    $ curl localhost
+
+![Testisivun korvaus](Kuvat/omasivu.png)
