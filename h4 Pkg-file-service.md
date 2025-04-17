@@ -96,6 +96,10 @@ Seuraavaksi testasin ajaa sen paikallisesti:
 
  Lopuksi vielä testasin uutta porttia. 
 
-         $ nc -vz localhost 8888 
+    $ nc -vz localhost 8888 
 
 ![porttitesti](Kuvat/porttitesti.png)
+
+Portti on auki eli toimii. 
+
+## Lähteet
