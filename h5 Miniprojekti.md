@@ -33,3 +33,13 @@ Sitten vielä kirjauduin masterille ssh-yhteydellä:
 Seuraavaksi yritin pingata slave-konetta: 
 
 ![ping the slave](Pkuvat/pingslave.png)
+
+Seuraavaksi piti hyväksyä slave-koneen avain: 
+
+    $ sudo salt-key -L
+
+![Avaimen tarkitus](Pkuvat/saltkey.png)
+
+    $ sudo salt-key -A
+
+![Avaimen hyäksyminen](Pkuvat/acceptslave.png)
