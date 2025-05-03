@@ -38,7 +38,7 @@ Seuraavaksi piti hyväksyä slave-koneen avain:
 
     $ sudo salt-key -L
 
-![Avaimen tarkitus](Pkuvat/saltkey.png)
+![Avaimen tarkistus](Pkuvat/slavekey.png)
 
     $ sudo salt-key -A
 
