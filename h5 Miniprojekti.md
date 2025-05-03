@@ -20,4 +20,8 @@ Kokeilin ensin testata lokaalisti. Ensiksi laitoin koneet pystyyn luomalla vagra
 
 ![Vagrantfile](Pkuvat/koneidenscripti.png)
 
+Sitten kokeilin käynnistää: 
 
+    $ vagrant up
+
+![VM:t päällä](Pkuvat/vmsup.png)
