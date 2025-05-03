@@ -25,3 +25,11 @@ Sitten kokeilin käynnistää:
     $ vagrant up
 
 ![VM:t päällä](Pkuvat/vmsup.png)
+
+Sitten vielä kirjauduin masterille ssh-yhteydellä: 
+
+    $ vagrant ssh master
+
+Seuraavaksi yritin pingata slave-konetta: 
+
+![ping the slave](Pkuvat/pingslave.png)
