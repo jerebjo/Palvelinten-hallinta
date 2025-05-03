@@ -63,3 +63,8 @@ Tein yksinkertaisen tiedoston jonka pitäisi asentaa python:
 
 ![install python](Pkuvat/pythonladattu.png)
 
+Lopuksi vielä ajoin lokaalisti, nähdäkseni tuleeko mitään ongelmia: 
+
+    $ sudo salt-call --local state.apply install_python
+
+![Pythonin lataus lokaalisti](Pkuvat/lokaaliajo.png)
