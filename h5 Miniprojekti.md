@@ -16,7 +16,9 @@ VM: Vagrant
 
 Aluksi mietin minkä tyyppisen projekin voisin tehdä. Halusin, että aihe liittyy peleihin tai elokuviin. Päätin ideoida tekoälyn kanssa ja lopulta päädyin valitsemaan aiheeksi elokuva triviapelin. Se tulee toimimaan saltin avulla, pelissä 2 tai useampi pelaaja(VM) kilpailevat toisiaan vastaan arvaamalla elokuvia eri kysymysten mukaan. 
 
-Kokeilin ensin testata lokaalisti. Ensiksi laitoin koneet pystyyn luomalla vagrantfilen: 
+## Koneidein asennus
+
+Ensiksi laitoin koneet pystyyn luomalla vagrantfilen: 
 
 ![Vagrantfile](Pkuvat/koneidenscripti.png)
 
@@ -49,3 +51,15 @@ Lopuksi vielä ping-testi, että kaikki toimii varmasti tähän asti:
     $ sudo salt '*' test.ping
 
 ![ping test saltin yli](Pkuvat/pingtest.png)
+
+## Lokaalitestaus minionilla
+
+Aloitin luomalla uuden kansion: 
+
+    $ sudo mkdir -p /srv/salt
+    $ sudo nano /srv/salt/install_python.sls
+
+Tein yksinkertaisen tiedoston jonka pitäisi asentaa python: 
+
+![install python](Pkuvat/pythonladattu.png)
+
