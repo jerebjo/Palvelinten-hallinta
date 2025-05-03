@@ -68,3 +68,11 @@ Lopuksi vielä ajoin lokaalisti, nähdäkseni tuleeko mitään ongelmia:
     $ sudo salt-call --local state.apply install_python
 
 ![Pythonin lataus lokaalisti](Pkuvat/lokaaliajo.png)
+
+## Mestarilta orjalle
+
+Seuraavaksi testasin voiko saman toteuttaa master-koneella ja sitten käskeä orja tekemään sama toiminto. Tein saman nimisen tiedoston myös master-koneelle ja kokelin ajaa sen saltin yli: 
+
+    $ sudo salt 'slave' state.apply install_python
+
+![saltin yli](Pkuvat/mestariltaorjalle.png)
