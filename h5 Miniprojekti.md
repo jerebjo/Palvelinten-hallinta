@@ -43,3 +43,9 @@ Seuraavaksi piti hyväksyä slave-koneen avain:
     $ sudo salt-key -A
 
 ![Avaimen hyäksyminen](Pkuvat/acceptslave.png)
+
+Lopuksi vielä ping-testi, että kaikki toimii varmasti tähän asti: 
+
+    $ sudo salt '*' test.ping
+
+![ping test saltin yli](Pkuvat/pingtest.png)
