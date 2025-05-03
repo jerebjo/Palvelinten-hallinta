@@ -14,8 +14,10 @@ VM: Vagrant
 
 ## Miniprojekti
 
-Aluksi mietin minkä tyyppisen projekin voisin tehdä. Halusin, että aihe liittyy peleihin tai elokuviin. Päätin ideoida tekoälyn kanssa ja lopulta päädyin valitsemaan aiheeksi elokuva triviapelin. Se tulee toimimaan saltin avulla, pelissä 2 tai useampi pelaaja(VM) kiplailevat toisiaan vastaan arvaamalla elokuvia eri kysymysten mukaan. 
+Aluksi mietin minkä tyyppisen projekin voisin tehdä. Halusin, että aihe liittyy peleihin tai elokuviin. Päätin ideoida tekoälyn kanssa ja lopulta päädyin valitsemaan aiheeksi elokuva triviapelin. Se tulee toimimaan saltin avulla, pelissä 2 tai useampi pelaaja(VM) kilpailevat toisiaan vastaan arvaamalla elokuvia eri kysymysten mukaan. 
 
 Kokeilin ensin testata lokaalisti. Ensiksi laitoin koneet pystyyn luomalla vagrantfilen: 
+
+![Vagrantfile](Pkuvat/koneidenscripti.png)
 
 
