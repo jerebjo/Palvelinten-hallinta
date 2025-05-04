@@ -233,11 +233,19 @@ Nyt pitäisi olla kaikki palaset valmiina ja päästään testailemaan tätä k�
 
 ## Testailua
 
-Nyt kaikki pitäisi olla sillä mallilla, että ohjelman voi ajaa. Kaikki luomat tiedostot tallentuvat master-koneelle, koska se on synkronoitu vagrantfilessa `salt/`-kansioon. Kokeilin ensin ajaa poistamatta muutaman kerran: 
+Nyt kaikki pitäisi olla sillä mallilla, että ohjelman voi ajaa. Kaikki luomat tiedostot tallentuvat master-koneelle, koska se on synkronoitu vagrantfilessa `salt/`-kansioon. Yritin testata, mutta aluksi Flaskin asennus epäonnistui, joten muokkasin `init.sls`-tiedostoa siten, että se lataa `python3-flask` ja myös apachen default-sivu tuli näkyviin, joten `ìnit.sls`-tiedostoa piti myös muokata siten, että default-sivu laitetaan pois päältä. Unohdin ottaa kuvia näistä virheistä. Lopulta kuitenkin kokeilin ajaa ohjelman ja sain sen toimimaan: 
 
     $ sudo salt '*' state.apply
 
 ![ensimmäinen testiajo](Pkuvat/ekatesti.png)
+
+Sitten siirryin selaimessa `http://192.168.88.10` ja katsoin toimiiko sivu: 
+
+![Nettisivuntesti](Pkuvat/nettisivu.png)
+
+Sivut toimivat oikein hyvin. 
+
+## 
 
 ## Lähteet 
 
