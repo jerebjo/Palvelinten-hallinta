@@ -76,3 +76,5 @@ Seuraavaksi testasin voiko saman toteuttaa master-koneella ja sitten käskeä or
     $ sudo salt 'slave' state.apply install_python
 
 ![saltin yli](Pkuvat/mestariltaorjalle.png)
+
+
