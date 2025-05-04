@@ -260,11 +260,21 @@ Seuraavaksi ajo:
 
     $ sudo salt '*' state.apply
 
-![toka ajo](Pkuvat/tokajao.png)
+![toka ajo](Pkuvat/tokaajo.png)
 
 `init.sls`-tiedoston ajo onnistui ja seuraavaksi tarkistin toimiiko osoite: `http://192.168.88.10`, mutta sivu ei kuitenkaan latautunut. Päätin kokeilla vaihtaa slave-koneella portin, jotta se pakottaa IPv4 kuuntelun: 
 
 ![portin vaihto](Pkuvat/portinvaihto.png)
+
+ja lopuksi vielä: 
+
+    $ sudo systemctl restart apache2 
+
+Nyt homma taas toimi, mutta en halunnut samaa ongelmaa jatkossa, joten homma piti automatisoida.
+
+Muutin `init.sls`-tiedostoa vielä näin: 
+
+![ipv4 force](Pkuvat/forcepiv4.png)
 
 ## Lähteet 
 
