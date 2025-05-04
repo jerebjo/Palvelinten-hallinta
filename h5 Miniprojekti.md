@@ -166,7 +166,7 @@ Siirryin master koneelle johon loin uuden kansion `trivia`
 
     $ mkdir trivia
 
-Seuraavaksi tein uuden tiedoston `app.py`
+Seuraavaksi tein uuden tiedoston `app.py`, jonka tarkoitus on hallinnoida sessiota:
 
     $ micro app.py
 
@@ -197,5 +197,41 @@ Lopuksi vielä `feedback.html`, joka kertoo pisteytyksestä:
 
 ![feedback.html koodi](Pkuvat/feedback.png)
 
-#### 
+#### Flask, apache ja saltilla hallinta
+
+Seuraavaksi piti yhdistää Flask ja Apache toimimaan yhdessä. Tätä varten loin uuden tiedoston `trivia.wsgi`, joka on siis toimii ns. sillanrakentaja Apachen ja Flaskin välillä. Loin ensin tiedoston: 
+
+    $ micro trivia.wsgi
+    
+![wsgi tiedoston sisältö](Pkuvat/wsgi.png)
+
+Seuraavaksi conffi-tiedosto, jotta saadaan Apache toimimaan oikeassa paikassa tätä varten tein uuden kansion ja sen sisälle itse tiedoston: 
+
+
+    $ mkdir /trivia/apache2
+    $ micro trivia.conf
+
+![trivia.conf tiedosto](Pkuvat/trivia.conf.png)
+
+Lopuksi vielä itse `ìnit.sls`, jotta saadaan sovellusten asennus automaattiseksi. Vielä kertaukseksi tänne tulee: 
+
+- Asennetaan Apache2, mod_wsgi ja Flask
+- Kopioidaan sovelluksen kaikki tiedostot VM:lle
+- Otetaan trivia.conf käyttöön (a2ensite)
+- Poistetaan Apachen oletussivusto (a2dissite)
+- Varmistetaan että Apache-palvelu on päällä 
+
+
+Loin `init.sls`- tiedoston `/salt/`-kansion alle: 
+
+        $ cd /srv/salt/
+        $ micro init.sls
+
+![init.sls sisältö](Pkuvat/init.sls.png)
+
+## Lähteet 
+
+- Karvinen, T. 4.11.2024. Two Machine Virtual Network With Debian 11 Bullseye and Vagrant. Luettavissa: https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/ Luettu: 3.5.2025
+- jerebjo. 2025. h2 soittokotiin. Luettavissa: https://github.com/jerebjo/Palvelinten-hallinta/blob/main/h2%20soitto%20kotiin.md Luettu: 3.5.2025
+- 
 
