@@ -243,9 +243,18 @@ Sitten siirryin selaimessa `http://192.168.88.10` ja katsoin toimiiko sivu:
 
 ![Nettisivuntesti](Pkuvat/nettisivu.png)
 
-Sivut toimivat oikein hyvin. 
+Sivut toimivat oikein hyvin. Ei se kaunis ole, mutta toimii. 
 
-## 
+Lopuksi vielä testasin tuhota koneet ja testata toimiiko se myös sen jälkeen. 
+
+    $ vagrant destroy
+    $ vagrant up
+    $ vagrant ssh master
+    # Hyväksytään avain:
+    $ sudo salt-key -L
+    $ sudo saltkey -A
+
+![saltkey](Pkuvat/saltkey.png)
 
 ## Lähteet 
 
