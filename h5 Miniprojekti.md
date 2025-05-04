@@ -20,7 +20,53 @@ Aluksi mietin minkä tyyppisen projekin voisin tehdä. Halusin, että aihe liitt
 
 Ensiksi laitoin koneet pystyyn luomalla vagrantfilen: 
 
-![Vagrantfile](Pkuvat/koneidenscripti.png)
+    # Master-koneen scripti, jossa asennetaan salt valmiiksi
+    $master_script = <<-MASTER_SCRIPT
+    set -o verbose
+    sudo apt-get update
+    sudo apt-get install -y curl tree
+    sudo mkdir -p /etc/apt/keyrings
+    sudo curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public | sudo tee /etc/apt/keyrings/salt-archive-keyring.pgp
+    sudo curl -fsSL https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.sources | sudo tee /etc/apt/sources.list.d/salt.sources
+    sudo apt-get update
+    sudo apt-get install -y salt-master
+    sudo systemctl restart salt-master.service
+    MASTER_SCRIPT
+    
+    # Minion-koneen scripti, jossa asennetaan salt valmiiksi ja otetaan yhteys Master-koneeseen.
+    $minion_script = <<-MINION_SCRIPT
+    set -o verbose
+    sudo apt-get update
+    sudo apt-get install -y curl tree
+    sudo mkdir -p /etc/apt/keyrings
+    sudo curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public | sudo tee /etc/apt/keyrings/salt-archive-keyring.pgp
+    sudo curl -fsSL https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.sources | sudo tee /etc/apt/sources.list.d/salt.sources
+    sudo apt-get update
+    sudo apt-get install -y salt-minion
+    echo -e 'master: 192.168.88.101' |sudo tee /etc/salt/minion
+    sudo systemctl restart salt-minion.service
+    MINION_SCRIPT
+    
+    Vagrant.configure("2") do |config|
+      # Virtuaalikone käyttämään synkronoitua kansiota.
+      config.vm.synced_folder ".", "/vagrant", disabled: true
+      config.vm.synced_folder "shared/", "/home/vagrant/shared", create: true
+      config.vm.box = "debian/bookworm64"
+    
+      # Master VM
+      config.vm.define "master" do |master|
+        master.vm.hostname = "master"
+        master.vm.network "private_network", ip: "192.168.88.101"
+        master.vm.provision "shell", inline: $master_script
+      end
+    
+      # Slave (minion) VM
+      config.vm.define "slave", primary: true do |slave|
+        slave.vm.hostname = "slave"
+        slave.vm.network "private_network", ip: "192.168.88.102"
+        slave.vm.provision "shell", inline: $minion_script
+      end
+    end
 
 Sitten kokeilin käynnistää: 
 
@@ -77,4 +123,79 @@ Seuraavaksi testasin voiko saman toteuttaa master-koneella ja sitten käskeä or
 
 ![saltin yli](Pkuvat/mestariltaorjalle.png)
 
+## Pelin rakennus
+
+
+Seuraavaksi lähdin luomaan itse peliä. Ensiksi halusin, että pelin pystyy ladata kuka vain, joten vagrantfilen master-koneen synkronointiin piti tehdä pieni lisäys:
+
+Eli lisäsin kohdan `master.vm.synced_folder "salt/", "/srv/salt", owner: "root", group: "root"`
+
+      # Master VM
+      config.vm.define "master" do |master|
+        master.vm.hostname = "master"
+        master.vm.network "private_network", ip: "192.168.88.101"
+        master.vm.synced_folder "salt/", "/srv/salt", owner: "root", group: "root"
+        master.vm.provision "shell", inline: $master_script
+      end
+
+### Rakenteen suunnittelu
+
+Eli seuraavaksi suunnittelin tekoälyn kanssa rakenteen pelille. Tarkoituksena oli tehdä elokuvatrivia-peli, jossa käyttäjä saa monivalitakysymyksen ja oikeasta vastauksesta saa pisteen, jotka lasketaan yhteen pelin edetessä. Rakenne lyhyesti: 
+
+- app.py: Flask sovelluksen pääohjelma, joka: 
+  - Hallinnoi peli-istuntoa
+  - Näyttää lomakkeen pelaajalle
+  - Tarkistaa vastauksen
+  - Näyttää palautteen ja lopputuloksen
+- html-pohjat:
+  - quiz.html: painikkeet vaihtoehdoille
+  - feedback.html: näyttää menikö vastaus oikein
+  - result.html: näyttää lopulliset pisteet ja mahdollisuuden aloittaa uudelleen
+- init.sls: Saltin pääkonfiguraatiotiedosto, joka kertoo mitä asennetaan ja mihin:
+   - Asentaa Apache2, WSGI-moduulin ja Flaskin
+   - Kopioi trivia-pelin tiedostot oikeaan hakemistoon `/var/www/trivia`
+   - Ottaa käyttöön oman `trivia.conf`-sivuston
+   - Poistaa Apachen oletussivun `000-default.conf`
+   - Käynnistää Apache-palvelun
+- top.sls: Saltin "reittikartta", joka määrittää mitä tiloja (init.sls) ajetaan mille koneille.
+- trivia.wsgi: WSGI-käynnistystiedosto, jota Apache käyttää Flask-sovelluksen ajamiseen.
+
+#### app.py luominen
+
+Siirryin master koneelle johon loin uuden kansion `trivia`
+
+    $ mkdir trivia
+
+Seuraavaksi tein uuden tiedoston `app.py`
+
+    $ micro app.py
+
+Pyysin chatGPT:ltä apua tiedoston sisällön luonnissa. Lopputulos näytti tältä: 
+
+![app.py sisältö](Pkuvat/app.py.png)
+
+#### Html-pohjat
+
+Seuraavaksi loin html-pohjat ja tätä varten tein uuden kansion `trivia`-kansion sisälle nimeltä `templates`:
+
+    $ mkdir templates
+
+Ensin `quiz.html`, jossa näytetään itse pelikysely: 
+
+    $ micro quiz.html
+
+![quiz.html koodi](Pkuvat/quiz.png)
+
+Seuraavaksi loin `result.html`, joka näyttää tuloksen ja mahdollistaa uudelleen pelaamisen:
+
+    $ micro result.html
+![result.html koodi](Pkuvat/result.png)
+
+Lopuksi vielä `feedback.html`, joka kertoo pisteytyksestä: 
+
+    $ micro feedback.html
+
+![feedback.html koodi](Pkuvat/feedback.png)
+
+#### 
 
