@@ -274,7 +274,11 @@ Nyt homma taas toimi, mutta en halunnut samaa ongelmaa jatkossa, joten homma pit
 
 Muutin `init.sls`-tiedostoa vielä näin: 
 
-![ipv4 force](Pkuvat/forcepiv4.png)
+![ipv4 force](Pkuvat/forceipv4.png)
+
+Nyt sivu toimii. 
+
+
 
 ## Lähteet 
 
