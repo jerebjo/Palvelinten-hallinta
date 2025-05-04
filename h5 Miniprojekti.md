@@ -256,6 +256,16 @@ Lopuksi vielä testasin tuhota koneet ja testata toimiiko se myös sen jälkeen.
 
 ![saltkey](Pkuvat/saltkey.png)
 
+Seuraavaksi ajo: 
+
+    $ sudo salt '*' state.apply
+
+![toka ajo](Pkuvat/tokajao.png)
+
+`init.sls`-tiedoston ajo onnistui ja seuraavaksi tarkistin toimiiko osoite: `http://192.168.88.10`, mutta sivu ei kuitenkaan latautunut. Päätin kokeilla vaihtaa slave-koneella portin, jotta se pakottaa IPv4 kuuntelun: 
+
+![portin vaihto](Pkuvat/portinvaihto.png)
+
 ## Lähteet 
 
 - Karvinen, T. 4.11.2024. Two Machine Virtual Network With Debian 11 Bullseye and Vagrant. Luettavissa: https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/ Luettu: 3.5.2025
