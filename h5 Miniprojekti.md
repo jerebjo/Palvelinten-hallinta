@@ -229,6 +229,16 @@ Loin `init.sls`- tiedoston `/salt/`-kansion alle:
 
 ![init.sls sisältö](Pkuvat/init.sls.png)
 
+Nyt pitäisi olla kaikki palaset valmiina ja päästään testailemaan tätä käytännössä.
+
+## Testailua
+
+Nyt kaikki pitäisi olla sillä mallilla, että ohjelman voi ajaa. Kaikki luomat tiedostot tallentuvat master-koneelle, koska se on synkronoitu vagrantfilessa `salt/`-kansioon. Kokeilin ensin ajaa poistamatta muutaman kerran: 
+
+    $ sudo salt '*' state.apply
+
+![ensimmäinen testiajo](Pkuvat/ekatesti.png)
+
 ## Lähteet 
 
 - Karvinen, T. 4.11.2024. Two Machine Virtual Network With Debian 11 Bullseye and Vagrant. Luettavissa: https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/ Luettu: 3.5.2025
