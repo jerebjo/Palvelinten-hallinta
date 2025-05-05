@@ -398,6 +398,7 @@ Seuraavaksi loin lisää kysymyksiä peliin muokkaamalla `app.py`-tiedostoa:
 ![Lisä kysymyksiä app.py](Pkuvat/lisääkysymyksiä.png)
 
 
+
 ## Lähteet 
 
 - Karvinen, T. 4.11.2024. Two Machine Virtual Network With Debian 11 Bullseye and Vagrant. Luettavissa: https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/ Luettu: 3.5.2025
