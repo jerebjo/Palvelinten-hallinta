@@ -276,7 +276,25 @@ Muutin `init.sls`-tiedostoa vielä näin:
 
 ![ipv4 force](Pkuvat/forceipv4.png)
 
-Nyt sivu toimii. 
+Nyt sivu toimii niin kuin pitää. 
+
+## Kahden koneen peliarkkitehtuuri
+
+Seuraavaksi lähdin muokkailemaan projektia siten, että kaksi konetta (master & slave) voivat pelata samaan aikaan toisiaan vastaan omista IP-osoitteistaan.
+
+Tässä tavoite: 
+
+| Kone | IP | Toiminta |
+|----------|----------|----------|
+| Master   | 192.168.88.101   | Ajaa trivia-palvelinta   |
+| Slave   | 192.168.88.102 | Ajaa trivia-palvelinta  |
+
+Seuraavaksi lähdin muokkaamaan `init.sls`-tiedostoa, jotta se toimii sekä masterilla, että slavella:
+
+![init muokkaus](Pkuvat/initmuokkaus.png)
+
+
+
 
 
 
