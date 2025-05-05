@@ -389,7 +389,13 @@ Ja vihdoin sain sivun näkyviin myyös toisella slave-koneella.
 
 ![Trivian testaus kahdella koneella](Pkuvat/triviakahdesti.png)
 
+Nyt kun kaikki toimii niin kuin pitää voidaan alkaa laajentamaan peliä. 
 
+## Pelin laajennus
+
+Seuraavaksi loin lisää kysymyksiä peliin muokkaamalla `app.py`-tiedostoa:
+
+![Lisä kysymyksiä app.py](Pkuvat/lisääkysymyksiä.png)
 
 
 ## Lähteet 
