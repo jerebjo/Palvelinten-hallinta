@@ -405,7 +405,25 @@ Eli nyt slave-koneilla peli toimii omissa IP-osoitteissaan.
 
 ![tulosten vertailu](Pkuvat/tulokset.png)
 
+Kokeilin vielä viimeisen kerran poistaa koneet, käynnistää uudestaan ja kokeilla toimiiko homma alusta asti saltin avulla.
 
+    $ vagrant destroy
+    $ vagrant up
+    $ vagrant ssh master
+    # Hyväksytään avaimet
+    $ Sudo salt-key -L
+    $ Sudo salt-key -A
+    $ sudo salt '*' state.apply
+
+Ja sitten oli totuuden hetki toimiiko kaikki odotetusti: 
+
+slave1: 192.168.88.102
+slave2: 192.168.88.103
+
+![viimeinen testi](Pkuvat/viimeinentesti.png)
+![pelien lopputulokset](Pkuvat/lopputulos.png)
+
+Kaikki näytti toimivan odotetusti!
 
 
 ## Lähteet 
