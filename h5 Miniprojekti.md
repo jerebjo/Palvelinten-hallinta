@@ -375,6 +375,19 @@ Edelleen ensimmäisen minionin osoite toimi hyvin, mutta toisen koneen osoittees
 
 ![trivia.conf päällä?](Pkuvat/triviapäällä.png)
 
+Kokeilin: 
+
+    $ sudo systemctl reload apache2
+
+Tällä kertaa sivulla ei näkynyt mitään. Seuraavaksi tarkistin onko `app.py` ja `trivia.wsgi` olemassa ja kyllä ne näyttivät olevan siellä. Kokeilin laittaa sivun pois päältä ja takaisin: 
+
+    $ sudo a2dissite trivia.conf
+    $ sudo a2ensite trivia.conf
+    $ sudo systemctl restart apache2
+
+Ja vihdoin sain sivun näkyviin myyös toisella slave-koneella. 
+
+![Trivian testaus kahdella koneella](Pkuvat/triviakahdesti.png)
 
 
 
