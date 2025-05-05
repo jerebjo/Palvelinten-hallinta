@@ -397,6 +397,15 @@ Seuraavaksi loin lisää kysymyksiä peliin muokkaamalla `app.py`-tiedostoa:
 
 ![Lisä kysymyksiä app.py](Pkuvat/lisääkysymyksiä.png)
 
+Koodi ei toiminut heti, joten piti tehdä hieman lisää muutoksia `app.py`-tiedostoon, mutta sain lopulta toimimaan. 
+
+Eli nyt slave-koneilla peli toimii omissa IP-osoitteissaan. 
+
+![Peli näkymä kahdessa eri osoitteessa](Pkuvat/elokuvatrivia.png)
+
+![tulosten vertailu](Pkuvat/tulokset.png)
+
+
 
 
 ## Lähteet 
