@@ -441,6 +441,6 @@ Hommiin kului aikaa ainakin 10 tuntia.
 - Karvinen, T. 2025. Tehtävänanto. h5 Miniprojekti. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/#h5-miniprojekti Luettu: 3.5.2025
 - nurminenkasper. 1.5.2025. h5 Miniprojekti. Luettavissa: https://github.com/nurminenkasper/Palvelinten-Hallinta/blob/main/h5/h5-Miniprojekti.md Luettu: 3.5.2025
 - Karvinen, T. 3.4.2024. Hello Salt Infra-as-Code. Luettavissa: https://terokarvinen.com/2024/hello-salt-infra-as-code/ Luettu: 4.5.2025.
-- Karvinen,T 28.3.2023. Salt Vagrant - automatically provision one master and two slaves. Luettavissa: Salt Vagrant - automatically provision one master and two slaves Luettu: 5.5.2025
+- Karvinen,T 28.3.2023. Salt Vagrant - automatically provision one master and two slaves. Luettavissa: https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file Luettu: 5.5.2025
   
 
