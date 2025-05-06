@@ -428,7 +428,11 @@ Kaikki näytti toimivan odotetusti!
 
 ## Etusivu. Laita projektisi etusivulle tärkeimmät tiedot 
 
-Loin etusivun, jossa asennus ohjeet. Löytyy [täältä](https://github.com/jerebjo/Elokuvatrivia/blob/main/README.md)
+Loin repon, jossa on yksinkertaiset asennusohjeet. Sivu löytyy [täältä](https://github.com/jerebjo/Elokuvatrivia/blob/main/README.md) 
+
+## Ajankäyttö
+
+Hommiin kului aikaa ainakin 10 tuntia.
 
 ## Lähteet 
 
