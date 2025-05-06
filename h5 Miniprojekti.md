@@ -426,6 +426,9 @@ slave2: 192.168.88.103
 
 Kaikki näytti toimivan odotetusti!
 
+## Etusivu. Laita projektisi etusivulle tärkeimmät tiedot 
+
+Loin etusivun, jossa asennus ohjeet. Löytyy [täältä](https://github.com/jerebjo/Elokuvatrivia/blob/main/README.md)
 
 ## Lähteet 
 
