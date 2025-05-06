@@ -418,6 +418,7 @@ Kokeilin vielä viimeisen kerran poistaa koneet, käynnistää uudestaan ja koke
 Ja sitten oli totuuden hetki toimiiko kaikki odotetusti: 
 
 slave1: 192.168.88.102
+
 slave2: 192.168.88.103
 
 ![viimeinen testi](Pkuvat/viimeinentesti.png)
@@ -430,5 +431,9 @@ Kaikki näytti toimivan odotetusti!
 
 - Karvinen, T. 4.11.2024. Two Machine Virtual Network With Debian 11 Bullseye and Vagrant. Luettavissa: https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/ Luettu: 3.5.2025
 - jerebjo. 2025. h2 soittokotiin. Luettavissa: https://github.com/jerebjo/Palvelinten-hallinta/blob/main/h2%20soitto%20kotiin.md Luettu: 3.5.2025
-- 
+- Karvinen, T. 2025. Tehtävänanto. h5 Miniprojekti. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/#h5-miniprojekti Luettu: 3.5.2025
+- nurminenkasper. 1.5.2025. h5 Miniprojekti. Luettavissa: https://github.com/nurminenkasper/Palvelinten-Hallinta/blob/main/h5/h5-Miniprojekti.md Luettu: 3.5.2025
+- Karvinen, T. 3.4.2024. Hello Salt Infra-as-Code. Luettavissa: https://terokarvinen.com/2024/hello-salt-infra-as-code/ Luettu: 4.5.2025.
+- Karvinen,T 28.3.2023. Salt Vagrant - automatically provision one master and two slaves. Luettavissa: Salt Vagrant - automatically provision one master and two slaves Luettu: 5.5.2025
+  
 
